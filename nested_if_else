@@ -1,0 +1,22 @@
+
+#include <stdio.h>
+int main(){
+    int age;
+    char gender;
+    printf("enter your age:");
+    scanf("%d",&age);
+    if(age>18){
+         printf("enter your gender (m/f) :");
+         scanf("%s",&gender);
+         if(gender == 'f'){
+             printf("pass");
+         }
+         else{
+             printf("fail");
+         }
+    }
+    else{
+        printf("fail");
+    }
+    return 0;
+}
