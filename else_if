@@ -1,1 +1,17 @@
+#include <stdio.h>
 
+int main() {
+    int unit;
+    printf("enter your unit :");
+    scanf("%d",& unit);
+    
+    if(unit<=100){
+            printf("%d", unit*5);
+    }else if(unit>=101 && unit<=200){
+        printf("%d", unit*7);
+    }
+    else if(unit>200){
+        printf("%d", unit*10);
+    }
+    
+}
