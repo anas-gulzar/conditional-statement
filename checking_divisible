@@ -1,1 +1,15 @@
+// Online C compiler to run C program online
+#include <stdio.h>
 
+int main() {
+    int num;
+    printf("enter your value:");
+    scanf("%d",&num);
+
+    if(num%5==0){
+        printf("it is divisible by 5");
+    }else{
+        printf("it isn't divisible by 5");
+    }
+    return 0;
+}
