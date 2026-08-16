@@ -1,1 +1,27 @@
+// Online C compiler to run C program online
+#include <stdio.h>
 
+int main() {
+    int a;
+    printf("enter first value :");
+    scanf("%d", &a);
+
+    int b;
+    printf("enter second value :");
+    scanf("%d", &b);
+
+    int c;
+    printf("enter third value :");
+    scanf("%d", &c);
+
+    if(a>b && a>c){
+        printf("highest value is %d",a);
+    }
+    else if(b>a && b>c){
+        printf("highest value is %d", b);
+    }
+    else{
+        printf("highest value is %d",c);
+    }
+    return 0;
+}
