@@ -1,1 +1,40 @@
+#include <stdio.h>
+int main(){
+    char add;
+    int n1;
+    int n2;
+
+    printf("enter operator (+ , - , x , / ) : ");
+    scanf("%c", &add);
+
+    printf("enter first value :");
+    scanf("%d",&n1);
+
+    printf("enter second value :");
+    scanf("%d",&n2);
+
+    switch(add){
+        case '+':
+        printf("sum is %d",n1+n2);
+        break;
+
+        case '-':
+        printf("subtraction is %d", n1-n2);
+        break;
+
+        case 'x':
+        printf("multiplication is %d", n1*n2);
+        break;
+
+        case '/':
+        printf("divide is %d", n1/n2);
+        break;
+
+        default:
+        printf("invalid input");
+        break;
+    }
+    return 0;
+
+    }
 
