@@ -10,4 +10,4 @@ int main(){
         printf("it's odd");
     }
     return 0;
-}7
+}
