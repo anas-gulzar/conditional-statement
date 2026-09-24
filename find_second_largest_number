@@ -1,1 +1,24 @@
+#include <stdio.h>
 
+int main() {
+    int num;
+    printf("enter numbers :");
+    scanf("%d",&num);
+    
+    int digit;
+    int second = -1;
+    int largest = 0;
+
+    while(num>0){
+        digit = num % 10;
+        if(digit > largest){
+            second = largest;
+            largest = digit;
+        }
+        if(digit < largest && digit > second){
+            second = digit;
+        }
+        num = num / 10;
+    }
+    printf("\n largest : %d \n second largest : %d",largest , second);
+}
