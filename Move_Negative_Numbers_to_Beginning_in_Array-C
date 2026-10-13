@@ -1,1 +1,34 @@
+#include <stdio.h>
 
+int main() {
+    int n;
+    printf("Enter Size of Array : ");
+    scanf("%d", &n);
+    int num[30];
+    printf("Enter Numbers one by one :");
+    for(int i=0; i<n; i++){
+        scanf("%d", &num[i]);
+    }
+    int pos[30];
+    int n1 = 0;
+    int neg[30];
+    int n2 = 0;
+
+    for(int i=0; i<n; i++){
+        if(num[i] >= 0){
+            pos[n1] = num[i];
+            n1++;
+        }else if(num[i] < 0){
+            neg[n2] = num[i];
+                n2++;
+        }
+    }
+
+    printf("After Moving Negative Numbers to Beginning : ");
+    for(int i=0; i<n2; i++){
+        printf("%d", neg[i]);
+    }
+    for(int i=0; i<n1; i++){
+        printf("%d", pos[i]);
+    }
+}
