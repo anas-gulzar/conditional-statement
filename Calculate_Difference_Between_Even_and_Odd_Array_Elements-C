@@ -1,1 +1,57 @@
+#include <stdio.h>
 
+int main() {
+    int n1;
+    printf("Enter Size of First Array : ");
+    scanf("%d", &n1);
+    if(n1 < 1 || n1 > 50){
+    printf("Invalid Array Size!");
+    return 0;
+    }
+    int num1[50];
+    printf("Enter First Array One by One : ");
+    for(int i=0; i<n1; i++){
+        scanf("%d", &num1[i]);
+    }
+    
+    int n2;
+    printf("Enter Size of Second Array : ");
+    scanf("%d", &n2);
+
+    if(n2 < 1 || n2 > 50){
+    printf("Invalid Array Size!");
+    return 0;
+    }
+    int num2[50];
+    printf("Enter Second Array One by One : ");
+    for(int i=0; i<n2; i++){
+        scanf("%d", &num2[i]);
+    }
+    
+    int even = 0;
+    int odd = 0;
+    int diff = 0;
+
+    for(int i=0; i<n1; i++){
+        if(num1[i] %2 == 0){
+            even += num1[i];
+        }else{
+            odd += num1[i];
+        }
+    }
+
+    for(int i=0; i<n2; i++){
+        if(num2[i] %2 == 0){
+            even += num2[i];
+        }else{
+            odd += num2[i];
+        }
+    }
+
+    diff = (even - odd);
+    if(diff < 0){
+        diff = -diff;
+    }
+    
+    printf("Difference : %d", diff);
+}
