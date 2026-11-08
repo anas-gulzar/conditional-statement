@@ -1,1 +1,24 @@
+#include <stdio.h>
 
+int main() {
+    int n;
+    printf("Enter Size of Array :");
+    scanf("%d",&n);
+    int num[50];
+    printf("Enter Numbers One by One :");
+    for(int i=0; i<n; i++){
+        scanf("%d",&num[i]);
+    }
+    int odd = 0;
+    int even = 0;
+
+    for(int i=0; i<n; i++){
+        if(i % 2 == 0){
+            even += num[i];
+        }else{
+            odd += num[i];
+        }
+    }
+
+    printf("\n Odd Indexes sum: %d\n Even Indexes sum : %d", odd, even);
+}
