@@ -1,1 +1,32 @@
+#include <stdio.h>
 
+int main() {
+    int n;
+    printf("Enter Size of Array : ");
+    scanf("%d", &n);
+
+    if(n < 0 || n > 50){
+        printf("Invalid Array Size!");
+        return 0;
+    }
+    int num [50];
+    printf("Enter Numbers one by one : ");
+    for(int i=0; i<n; i++){
+        scanf("%d", &num[i]);
+    }
+    int count = 1;
+    int maxcount = 1;
+
+    for(int i=1; i<n; i++){
+        if(num[i] > num[i - 1]){
+            count++;
+           }else{
+            count = 1;
+           }
+        if(count > maxcount){
+        maxcount = count;
+        }
+    }
+
+    printf("Largest Length : %d", maxcount);
+}
